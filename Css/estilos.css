@@ -52,7 +52,12 @@ h4{
 }
 
 .dis-block{
-    display: block;
+    display: block!important;
+}
+
+.alinear-derecha{
+    display: flex;
+    justify-content: flex-end;
 }
 
 /* Botones */
@@ -62,8 +67,10 @@ h4{
     /* Eliminar Interlineado */
     text-decoration: none;
     font-size: 1.8rem;
+    margin-top: 1.5rem;
     /* El padding sirve para hacer los bordes gordos */
-    padding: 1rem 2rem;
+    padding: 0.7rem 2rem;
+    display: inline-block;
     text-align: center;
 }
 
@@ -158,4 +165,82 @@ h4{
 .precio{
     color: #71B100;
     font-weight: 700;
+}
+
+.iconos-caracteristicas{
+    /* Quitar las viñetas y el padding para más orden */
+    list-style: none;
+    display: flex;
+    padding: 0;   
+    /* Centrar los iconos */
+    justify-content: space-evenly;
+}
+
+.iconos-caracteristicas li{
+    /* Alinear uno adelante del otro */
+    display: flex;
+}
+
+.iconos-caracteristicas li img{
+    /* Agregar separacion entre el numero y la imagen */
+    margin-right: 2rem;
+}
+
+/* Contacto home */
+.imagen-contacto{
+    background-image: url(../img/encuentra.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 40rem;
+    /* Se pone display: flex; para habilitar flexbox */
+    justify-content: space-between;
+    padding-top: 7.5rem;
+    align-items: center;
+}
+
+.contenido-contacto{
+    /* Hacer que laas imagenes tomen todo el tamaño disponible */
+    flex: 1;
+    color:#FFFFFF;
+}
+
+.contenido-contacto p{
+    font-size: 1.8rem;
+}
+
+/* Seccion inferior */
+.seccion-inferior{
+    display: flex;
+    justify-content: space-between;
+}
+
+.seccion-inferior.blog{
+    flex-basis: 60%;
+}
+
+.seccion-inferior .testimoniales{
+    flex-basis: calc(40% - 2rem);
+}
+
+.entrada-blog{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.entrada-blog:last-of-type{
+    margin-bottom: 0;
+}
+
+.entrada-blog .imagen{
+    flex-basis: 40%;
+}
+
+.entrada-blog .texto-entrada{
+    flex-basis: calc(60% -3rem);
+}
+
+.texto-entrada h4{
+    margin: 0;
+    line-height: 1.4;
 }
