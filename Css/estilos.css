@@ -240,7 +240,21 @@ h4{
     flex-basis: calc(60% -3rem);
 }
 
+.texto-entrada a{
+    color: #000000;
+    text-decoration: none;
+}
+
 .texto-entrada h4{
     margin: 0;
     line-height: 1.4;
+}
+
+.texto-entrada h4::after{
+    content: '';
+    display: block;
+    width: 15rem;
+    height: 0.5rem;
+    background-color: #71B100;
+    margin-top: 1rem;
 }
