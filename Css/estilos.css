@@ -60,6 +60,10 @@ h4{
     justify-content: flex-end;
 }
 
+.contenido-centrado{
+   max-width: 800px; 
+}
+
 /* Botones */
 .boton{
     color: #FFFFFF;
@@ -83,6 +87,11 @@ h4{
 }
 
 /** Header **/
+.site-header{
+    background-color: #333333;
+    padding: 1rem 0rem 3rem 0rem;
+}
+
 .site-header.inicio {
     background-image: url(../img/header.jpg);
     background-position: center center;
@@ -144,14 +153,17 @@ h4{
 .contenedor-anuncios{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .anuncio{
+    flex-shrink: 0;
     flex-basis: calc(33.3% - 1rem);
     border-style: solid;
     border-color: #B5B5B5;
     border-width: 1px;
     background-color: #F5F5F5;
+    margin-bottom: 2rem;
 }
 
 .contenido-anuncio{
@@ -174,6 +186,8 @@ h4{
     padding: 0;   
     /* Centrar los iconos */
     justify-content: space-evenly;
+    max-width: 500px;
+    flex: 1;
 }
 
 .iconos-caracteristicas li{
@@ -219,7 +233,7 @@ h4{
 }
 
 .seccion-inferior .testimoniales{
-    flex-basis: calc(40% - 2rem);
+    flex-basis: calc(30% - 2rem);
 }
 
 .entrada-blog{
@@ -237,7 +251,7 @@ h4{
 }
 
 .entrada-blog .texto-entrada{
-    flex-basis: calc(60% -3rem);
+    flex-basis: calc(60% - 3rem);
 }
 
 .texto-entrada a{
@@ -247,7 +261,7 @@ h4{
 
 .texto-entrada h4{
     margin: 0;
-    line-height: 1.4;
+    line-height: 1;
 }
 
 .texto-entrada h4::after{
@@ -257,4 +271,70 @@ h4{
     height: 0.5rem;
     background-color: #71B100;
     margin-top: 1rem;
+}
+
+/* Testimoniales */
+.testimonial{
+    background-color: #71B100;
+    padding: 2rem;
+    color: #FFFFFF;
+    border-radius: 2rem;
+}
+
+.testimonial p{
+    text-align: right;
+}
+
+.testimonial blockquote::before{
+    content: '';
+    background-image: url(../img/comilla.svg);
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: 0;
+    left: 1px;
+}
+
+.testimonial blockquote{
+    position: relative;
+    padding-left: 5rem;
+    font-weight: 300;
+}
+
+/* Footer */
+.site-footer{
+    background-color: #333333;
+    margin: 0;
+}
+
+.contenedor-footer{
+    display: flex;
+    padding: 3rem 0rem;
+    justify-content: space-between;
+}
+
+.copyrigth{
+    margin: 0;
+    color: #ffffff;
+}
+
+/* Solo para las paginas internas */
+/** Nosotros **/
+.contenido-nosotros{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-column-gap: 3rem;
+}
+
+.texto-nosotros blockquote{
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0rem 0rem 3rem 0rem;
+}
+/** Anuncios **/
+.resumen-propiedad{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
