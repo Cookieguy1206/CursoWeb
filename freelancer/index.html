@@ -5,9 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Freelancer</title>
+    <link rel="stylesheet" href="css/normalize.Css">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    
+    <header class="site-header">
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Clientes</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
 
+    <div class="hero">
+        <div class="contenedor-hero">
+            <h1>Diseño y desarrollo Freelancer</h1>
+            <p><i class="fas fa-map-marker-alt"></i>Yumbo, Valle del cauca</p>
+            <a href="#" class="boton">Contactar</a>
+        </div>
+    </div>
+
+    <div class="contenedor">
+        <main class="servicios">
+            <h2>Nuestros servicios</h2>
+            <div class="contenedor-servicios">
+                <div class="servicio">
+                    <h3>Diseño Web</h3>
+                    <div class="iconos">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet vero inventore cum saepe! 
+                    Ducimus excepturi deleniti consectetur ipsam praesentium cum ullam maxime vitae voluptatum.</p>
+                </div>
+                <div class="servicio">
+                    <h3>Aplicaciones Moviles</h3>
+                    <div class="iconos">
+                        <i class="fab fa-android"></i>
+                        <i class="fab fa-apple"></i>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet vero inventore cum saepe! 
+                    Ducimus excepturi deleniti consectetur ipsam praesentium cum ullam maxime vitae voluptatum.</p>
+                </div>
+                <div class="servicio">
+                    <h3>Social Media</h3>
+                    <div class="iconos">
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet vero inventore cum saepe! 
+                    Ducimus excepturi deleniti consectetur ipsam praesentium cum ullam maxime vitae voluptatum.</p>
+                </div>
+            </div>
+        </main>
+
+        <section id="contacto" class="contacto">
+            <h2>Contacto</h2>
+            <form action="#">
+                <legend>Contactanos llenando todos los campos</legend>
+
+                <div class="contenedor-campos">
+                    <div class="campo">
+                        <label>Nombre:</label>
+                        <input type="text" name="nombre" placeholder="Tu nombre">
+                    </div>
+                    <div class="campo">
+                        <label>Telefono:</label>
+                        <input type="tel" name="telefono" placeholder="Tu telefono">
+                    </div>
+                    <div class="campo w-100">
+                        <label>Correo:</label>
+                        <input type="mail" name="correo" placeholder="Tu correo">
+                    </div>
+                    <div class="campo w-100">
+                        <label>Mensaje:</label>
+                        <textarea></textarea>
+                    </div>
+                </div> <!-- Contenedor de campos -->
+                <div class="enviar">
+                    <input type="submit" class="boton" value="enviar">
+                </div>
+            </form>
+        </section>
+
+    </div>
 </body>
 </html>
