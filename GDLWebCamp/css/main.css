@@ -167,6 +167,12 @@ h3 {
   margin: 0;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 /*Botones*/
 .button {
   background-color: #FE3918;
@@ -180,6 +186,22 @@ h3 {
   margin-top: 20px;
   display: inline-block;
   transition: all .3s ease;
+  border: 2px solid #FE3918;
+}
+
+.button.hollow, .button.hollow:hover {
+  background-color: #FFFFFF;
+  color: #FE3918;
+}
+
+.button.transparente {
+  background-color: transparent;
+  border: 2px solid #FFFFFF;
+}
+
+.button.transparente:hover {
+  transform: scale(1.5);
+  background-color: transparent;
 }
 
 .button:hover {
@@ -459,8 +481,344 @@ h3 {
   font-size: 20px;
 }
 
+/*Invitados*/
+.lista-invitados li {
+  padding: 10px;
+  float: left;
+}
 
+@media (min-width: 480px) {
+  .lista-invitados li {
+    width: 50%;
+  }
+}
 
+@media (min-width: 768px) {
+  .lista-invitados li {
+    width: 33.3%;
+  }
+}
+
+.invitado {
+  position: relative;
+  overflow: hidden;
+}
+
+.invitado img {
+  max-width: 100%;
+  filter: grayscale(1);
+  transition: all .5s ease-in-out;
+}
+
+.invitado:hover img {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+.invitado:hover p {
+  bottom: -80px;
+  opacity: 0;
+}
+
+.invitado p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 15px 10px;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  width: 100%;
+  text-align: left;
+  font-family: 'Oswald', sans-serif;
+  color: #FE3918;
+  text-transform: uppercase;
+  transition: all .5s ease-in-out;
+}
+
+/*Contador*/
+.parallax::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-filter: brightness(.8);
+  filter: brightness(.8);
+}
+
+.contador {
+  position: relative;
+  height: auto;
+}
+
+.contador::before {
+  background-image: url(../img/bg-resumen.jpg);
+  content: '';
+}
+
+.resumen-evento {
+  position: relative;
+  padding: 120px 0px;
+}
+
+.resumen-evento li {
+  width: 50%;
+  float: left;
+  text-align: center;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 25px;
+}
+
+@media (min-width: 768px) {
+  .resumen-evento li {
+  width: 25%;
+  }
+}
+
+p.numero {
+  color: #FE4918;
+  font-size: 4em;
+  display: block;
+  margin: 0px 0px 10px 0px;
+  font-family: 'Oswald', sans-serif;
+}
+
+/*Tabla de precios*/
+/*Este simbolo: > significa "el primer"*/
+.lista-precios > li {
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  .lista-precios > li {
+    float: left;
+    width: 33.3%;
+  }
+}
+
+.tabla-precio {
+  border: 1px solid #E1E1E1;
+  background-color: #FFFFFF;
+  padding: 40px 0px;
+  text-align: center;
+  transition: all .3s ease;
+}
+
+.tabla-precio:hover {
+  transform: scale(1.1);
+  border: 1px solid #FE3918;
+  box-shadow: 0px 0px 50px #666666;
+}
+
+.tabla-precio ul li {
+  font-family: 'PT Sans', sans-serif;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #868686;
+  line-height: 26px;
+}
+
+.tabla-precio ul li:before {
+  font-family: 'FontAwesome';
+  display: inline-block;
+  vertical-align: top;
+  padding: 0.5px 5px;
+  font-size: 20px;
+  color: green;
+  -webkit-font-smoothing: antialiased;
+  content: '\f00c';
+}
+
+.tabla-precio h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.tabla-precio p.numero {
+  color: #000000;
+  font-weight: bold;
+  margin: 20px 0px
+}
+
+/*Mapa*/
+.mapa {
+  height: 420px;
+  background-color: green;
+}
+
+/*Testimoniales*/
+.testimoniales {
+  padding-bottom: 20px;
+}
+
+.testimonial {
+  padding: 5px;
+}
+
+@media (min-width: 768px) {
+  .testimonial {
+    float: left;
+    width: 33.3%;
+  }
+}
+
+blockquote {
+  background-color: #FFFFFF;
+  border: 1.8px solid #CFCFCF;
+  position: relative;
+  margin: 0px 0px 10px 0px;
+  padding-bottom: 20px;
+  box-shadow: 0px 0px 2px #666666;
+}
+
+blockquote p {
+  text-align: justify!important;
+  font-size: 1em!important;
+  font-family: 'PT Sans', sans-serif;
+  padding: 0px 20px 0px 65px;
+}
+
+blockquote p::before {
+  content: '\201c';
+  position: absolute;
+  left: 13px;
+  top: 8px;
+  font-size: 8rem;
+  margin: 0px;
+  line-height: 1;
+  color: #FE3918;
+}
+
+.info-testimonial {
+  padding: 0px;
+}
+
+.info-testimonial img {
+  float: left;
+  width: 20%;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.info-testimonial cite {
+  text-align: left;
+  color: #FE3918;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding-top: 20px;
+  width: 66.6%;
+  float: right;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.info-testimonial cite span {
+  color: #000000;
+  display: block;
+  text-transform: none;
+  margin-top: 5px;
+}
+
+/*Newsletter*/
+.newsletter {
+  position: relative;
+  height: auto;
+}
+
+.newsletter::before {
+  background-image: url(../img/bg-newsletter.jpg);
+  content: '';
+}
+
+.newsletter .contenido {
+  padding: 100px 0px;
+  color: #FFFFFF;
+  text-align: center;
+  position: relative;
+}
+
+.newsletter .contenido p {
+  font-size: 1.2em;
+  position: relative;
+}
+
+.newsletter .contenido h3 {
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-size: 7vw;
+  font-family: 'PT Sans', sans-serif;
+}
+
+/*Cuenta regresiva*/
+.cuenta-regresiva ul li {
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .cuenta-regresiva ul li {
+    width: 25%;
+    float: left;
+  }
+}
+
+/*Footer*/
+.site-footer {
+  background-color: #353535;
+  padding-top: 40px;
+  margin-top: 20px;
+}
+
+footer .contenedor > div {
+  color: #FFFFFF;
+  padding: 0px 20px;
+  font-size: 15px;
+  text-align: justify;
+  font-family: 'PT Sans', sans-serif;
+}
+
+@media (min-width: 768px) {
+  footer .contenedor > div {
+    width: 33.3%;
+    float: left;
+  }
+}
+
+footer h3{
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 20px;
+}
+
+footer h3 span {
+  color: #FE4918;
+}
+
+footer .ultimos-tweets li {
+  margin-bottom: 10px;
+}
+
+footer .redes-sociales {
+  text-align: left;
+}
+
+.copyright {
+  background-color: #2E2E2E;
+  padding: 10px 0px;
+  margin: 20px 0px 0px 0px;
+  color: #FFFFFF;
+  text-align: center;
+}
 
 
 
