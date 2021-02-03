@@ -1,0 +1,55 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.contenedor {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.entrada-blog a {
+    display: inline-block;
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/** CODIGO AQUI **/
+@media (min-width: 768px) {
+    /*Aplicar flexbox en el elemento padre, es decir, 
+    al div que encierra a 2 o más divs*/
+    .dos-columnas {
+        display: flex;
+        /*Space between coloca un elemento a cada lado*/
+        justify-content: space-between;
+    }
+
+    /*Luego poner el selector para aplicar el dos columnas*/
+    .entrada-blog { 
+        flex-basis: calc(50% - 1rem); 
+    }
+}

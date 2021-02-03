@@ -1,0 +1,33 @@
+//FUNCIONES
+//DECLARACIÓN
+function sumar(numero1, numero2) {
+    console.log(numero1 + numero2);
+}
+
+let numero1 = 10;
+let numero2 = 10;
+sumar(numero1, numero2);
+
+//EXPRESION
+let sumar2 = function(numero1, numero2) {
+    console.log(numero1 + numero2);
+}
+
+numero1 = 3;
+numero2 = 3;
+sumar2(numero1, numero2);
+
+//IIFE
+//NO HAY QUE LLAMARLAS PORQUE SE LLAMAN AUTOMATICAMENTE
+//PREVIENE QUE NO SE PUEDAN ACCEDER EN OTROS ARCHIVOS JS PARA EVITAR CONFLICTOS
+(function() {
+    console.log("Esto es IIFE");
+})();
+
+//HOISTING
+//JS SE EJECUTA EN DOS ACCIONES:
+//1) CREACION: EN DONDE SE REGISTRAN TODAS LAS FUNCIONES
+//2) EJECUCION: EN DONDE SE EJECUTA EL CODIGO
+/*EN LA DECLARACION DE LA FUNCION FUNCIONA AL MANDAR A LLAMAR PRIMERO LA FUNCION 
+PORQUE YA SE DEFINIÓ COMO UNA, EN LA EXPRESION NO FUNCIONA PORQUE JS LO LEE COMO
+SI FUERA UNA VARIABLE Y NO COMO UNA FUNCION COMO TAL*/
