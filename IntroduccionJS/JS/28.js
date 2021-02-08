@@ -19,4 +19,5 @@ let obtenerEmpleados = () => {
     });
 }
 
+console.log("LOL");
 obtenerEmpleados();
